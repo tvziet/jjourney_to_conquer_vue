@@ -13,8 +13,19 @@
 
 <body>
     <div id="app">
-        <h1>{{ product }}</h1>
-        <p>{{ description }}</p>
+        <div class="nav-bar">
+            <div class="product-display">
+                <div class="product-container">
+                    <div class="product-image">
+                        <img :src="image">
+                    </div>
+                    <div class="product-info">
+                        <h1>{{ product }}</h1>
+                        <a :href="url" target="_blank">More products like this</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Import App -->
     <script src="./main.js"></script>
