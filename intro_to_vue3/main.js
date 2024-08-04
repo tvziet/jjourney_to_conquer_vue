@@ -3,7 +3,7 @@ const app = Vue.createApp({
         return {
             product: 'Socks',
             image: './assets/images/socks_blue.jpg',
-            inventory: 11,
+            inventory: 0,
             onSale: true,
             details: ['50% cotton', '30% wool', '20% polyester'],
             variants: [
@@ -23,6 +23,11 @@ const app = Vue.createApp({
         },
         removeFromCart() {
             this.cart -= 1
+        }
+    },
+    computed: {
+        isOutOfStock() {
+            return this.inventory === 0
         }
     }
 })
