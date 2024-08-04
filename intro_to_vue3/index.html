@@ -25,17 +25,27 @@
                         <p v-else-if="inventory <= 10 && inventory >0">Almost sold out!</p>
                         <p v-else>Out of Stock</p>
                         <p v-if="onSale">On Sale!</p>
+                        <p>Details about the {{ product }}:</p>
+                        <ul>
+                            <li v-for="detail in details">{{ detail }}</li>
+                        </ul>
+                        <!-- The variants is a list of key, value -->
+                        <div v-for="variant in variants" :key="variant.id">{{ variant.color }}</div>
+                        <p>This {{ product }} has sizes:</p>
+                        <ul>
+                            <!-- The sizes is a list of values -->
+                            <li v-for="(size, index) in sizes" :key="index">{{ size }}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Import App -->
-    <script src="./main.js"></script>
-    <!-- Mount App -->
-    <script>
-        const mountedApp = app.mount('#app');
-    </script>
+        <!-- Import App -->
+        <script src="./main.js"></script>
+        <!-- Mount App -->
+        <script>
+            const mountedApp = app.mount('#app');
+        </script>
 </body>
 
 </html>
