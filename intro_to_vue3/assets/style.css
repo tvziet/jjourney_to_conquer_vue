@@ -22,7 +22,7 @@ body {
 }
 
 .cart {
-    margin: 80px 100px;
+    margin: 25px 100px;
     float: right;
     border: 1px solid #d8d8d8;
     padding: 10px 30px;
@@ -107,7 +107,7 @@ p {
 .product-image,
 .product-info {
     width: 50%;
-    margin-top: 4rem;
+    margin-top: 1rem;
 }
 
 .review-form {
